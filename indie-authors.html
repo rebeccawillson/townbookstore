@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Independent Author Policy - The Town Bookstore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #FDF8F3;
+      --warm-brown: #5A3E2B;
+      --soft-brown: #8B6F58;
+      --accent-brown: #A07A55;
+      --hover-brown: #7B5A3C;
+      --shadow: rgba(90, 62, 43, 0.15);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--cream);
+      color: var(--warm-brown);
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--cream);
+      padding: 1rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      margin: 0;
+      cursor: default;
+    }
+    nav a {
+      color: var(--warm-brown);
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--hover-brown);
+    }
+    nav a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0%;
+      background: var(--hover-brown);
+      transition: width 0.3s ease;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    nav a[aria-current="page"] {
+      color: var(--hover-brown);
+      font-weight: 700;
+    }
+    main {
+      max-width: 800px;
+      margin: 3rem auto 5rem;
+      padding: 0 2rem;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px var(--shadow);
+      padding: 3rem 3rem 4rem;
+      font-size: 1.1rem;
+    }
+    h2 {
+      color: var(--warm-brown);
+      font-weight: 600;
+      font-size: 2.4rem;
+      margin-bottom: 1.8rem;
+      letter-spacing: 1.3px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+    p {
+      margin-bottom: 1.3rem;
+      line-height: 1.5;
+    }
+    a.email-link {
+      color: var(--accent-brown);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    a.email-link:hover {
+      color: var(--hover-brown);
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.6rem;
+      margin-bottom: 1.8rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      color: var(--soft-brown);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--soft-brown);
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Town Bookstore</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="shop.html">Shop</a>
+      <a href="staff-picks.html">Staff Picks</a>
+      <a href="indie-authors.html" aria-current="page">Indie Authors</a>
+      <a href="events.html">Events</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Independent Author Policy</h2>
+    <p>At The Town Bookstore, we are passionate about supporting independent and local authors. We believe in fostering a diverse and vibrant literary community where new voices can be heard and celebrated.</p>
+    <p>If you are an independent author interested in having your book considered for our store, please review our submission guidelines below.</p>
+    <h3>Submission Guidelines</h3>
+    <ul>
+      <li>Submit a print copy of your book (or digital format upon request) along with a brief author bio.</li>
+      <li>We accept fiction, non-fiction, poetry, children’s books, and local interest titles.</li>
+      <li>Please include your contact information and any relevant marketing materials.</li>
+      <li>All submissions will be reviewed within 4-6 weeks. Due to space limitations, we cannot guarantee stocking all titles.</li>
+      <li>We prioritize unique and well-crafted books that fit the tastes of our community.</li>
+    </ul>
+    <p>Send submissions or questions to <a href="mailto:lisa@townbookstore.com" class="email-link">lisa@townbookstore.com</a>. We look forward to reading your work!</p>
+    <p>Thank you for considering The Town Bookstore as a partner in your publishing journey.</p>
+    <p><em>Lisa Schwartz, Owner</em></p>
+  </main>
+
+  <footer>
+    &copy; 2025 The Town Bookstore &nbsp;|&nbsp; 270 East Broad Street, Westfield, NJ &nbsp;|&nbsp; (908) 233-3535
+  </footer>
+</body>
+</html>

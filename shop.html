@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop - The Town Bookstore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #FDF8F3;
+      --warm-brown: #5A3E2B;
+      --soft-brown: #8B6F58;
+      --accent-brown: #A07A55;
+      --hover-brown: #7B5A3C;
+      --shadow: rgba(90, 62, 43, 0.15);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--cream);
+      color: var(--warm-brown);
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--cream);
+      padding: 1rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      margin: 0;
+      cursor: default;
+    }
+    nav a {
+      color: var(--warm-brown);
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--hover-brown);
+    }
+    nav a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0%;
+      background: var(--hover-brown);
+      transition: width 0.3s ease;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    main {
+      max-width: 900px;
+      margin: 3rem auto 5rem;
+      padding: 0 1.5rem;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px var(--shadow);
+      padding: 3rem 3rem 4rem;
+    }
+    h2 {
+      color: var(--warm-brown);
+      font-weight: 600;
+      font-size: 2.6rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1.5px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+    p {
+      color: var(--soft-brown);
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+    .links a {
+      background: var(--warm-brown);
+      color: var(--cream);
+      padding: 1rem 2rem;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 10px var(--shadow);
+      transition: background 0.3s ease;
+    }
+    .links a:hover {
+      background: var(--hover-brown);
+    }
+    .photo-placeholder {
+      background: var(--accent-brown);
+      height: 200px;
+      width: 300px;
+      margin: 0 auto 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 14px var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cream);
+      font-size: 1.1rem;
+      font-weight: 600;
+      font-style: italic;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      color: var(--soft-brown);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--soft-brown);
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Town Bookstore</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="staff-picks.html">Staff Picks</a>
+      <a href="indie-authors.html">Indie Authors</a>
+      <a href="events.html">Events</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Shop Online</h2>
+    
+    <p>We’re happy to offer a selection of print books and eBooks through our partnership with <a href="https://bookshop.org/shop/thetownbookstore" target="_blank" rel="noopener noreferrer">Bookshop.org</a>. You’ll find a curated range of titles that our customers love, with a portion of every purchase supporting The Town Bookstore.</p>
+
+    <div class="photo-placeholder">Photo of bookshelves or merch here</div>
+
+    <p>For audiobook lovers, we’ve also partnered with <a href="https://libro.fm/store/thetownbookstore" target="_blank" rel="noopener noreferrer">Libro.fm</a>, where you can browse and buy audiobooks while supporting independent bookstores like ours.</p>
+
+    <div class="photo-placeholder">Photo of audiobook app or headphones here</div>
+
+    <p><em>Note: These are online purchases and may not reflect our in-store inventory. If you want to request a specific book or special order, please contact us directly.</em></p>
+
+    <div class="links">
+      <a href="https://bookshop.org/shop/thetownbookstore" target="_blank" rel="noopener noreferrer">Shop Print & eBooks</a>
+      <a href="https://libro.fm/store/thetownbookstore" target="_blank" rel="noopener noreferrer">Shop Audiobooks</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 The Town Bookstore &nbsp;|&nbsp; 270 East Broad Street, Westfield, NJ &nbsp;|&nbsp; (908) 233-3535
+  </footer>
+</body>
+</html>
