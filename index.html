@@ -161,6 +161,33 @@
       border-radius: 2px;
       filter: drop-shadow(0 1px 0 rgba(255,255,255,0.3));
     }
+    /* New newsletter section */
+    .newsletter-section {
+      max-width: 900px;
+      margin: 0 auto 4rem;
+      background: white;
+      border-radius: 15px;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 8px 20px var(--shadow);
+      text-align: center;
+    }
+    .newsletter-section a {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent-brown);
+      text-decoration: none;
+      border: 2px solid var(--accent-brown);
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      display: inline-block;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+    .newsletter-section a:hover {
+      background-color: var(--accent-brown);
+      color: var(--cream);
+      box-shadow: 0 6px 18px rgba(160, 122, 85, 0.8);
+    }
   </style>
 </head>
 <body>
@@ -202,6 +229,12 @@
       <a href="events.html" class="btn" aria-label="See upcoming events">See Events</a>
     </section>
   </main>
+
+  <section class="newsletter-section" aria-label="Newsletter Signup">
+    <a href="https://us14.campaign-archive.com/?u=6bb90dc19abe8bbc6ca5d4711&id=5cab24f54a" target="_blank" rel="noopener noreferrer" aria-label="June 2025 newsletter link">
+      Read Our June Newsletter
+    </a>
+  </section>
 
   <footer>
     &copy; 2025 The Town Bookstore &nbsp;|&nbsp; 270 East Broad Street, Westfield, NJ &nbsp;|&nbsp; (908) 233-3535
