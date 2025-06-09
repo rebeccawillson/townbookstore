@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Independent Authors - The Town Bookstore</title>
+  <title>Independent Author Policy - The Town Bookstore</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -13,6 +13,9 @@
       --accent-brown: #A07A55;
       --hover-brown: #7B5A3C;
       --shadow: rgba(90, 62, 43, 0.15);
+    }
+    * {
+      box-sizing: border-box;
     }
     body {
       margin: 0;
@@ -73,17 +76,37 @@
       max-width: 800px;
       margin: 3rem auto 5rem;
       padding: 0 2rem;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px var(--shadow);
+      padding: 3rem 3rem 4rem;
+      font-size: 1.1rem;
     }
     h2 {
       color: var(--warm-brown);
       font-weight: 600;
       font-size: 2.4rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.8rem;
       letter-spacing: 1.3px;
       text-align: center;
+      font-family: 'Poppins', sans-serif;
     }
     p {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.3rem;
+      line-height: 1.5;
+    }
+    a.email-link {
+      color: var(--accent-brown);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    a.email-link:hover {
+      color: var(--hover-brown);
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.6rem;
+      margin-bottom: 1.8rem;
     }
     footer {
       text-align: center;
@@ -92,6 +115,15 @@
       font-size: 0.9rem;
       border-top: 1px solid var(--soft-brown);
       font-weight: 400;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
@@ -109,21 +141,14 @@
   </header>
 
   <main>
-    <h2>Independent (Self-Published) Author Policy</h2>
-
+    <h2>Independent Author Policy</h2>
+    <img src="https://drive.google.com/uc?export=view&id=1SXcHMp5mO_m7bEeFXqwEIlxpgbjQ6ieP" alt="Author or Book Image">
     <p>Thank you for your interest in The Town Book Store. Please read our policy in its entirety; because we receive several author submissions weekly, we cannot respond to each individually.</p>
-
     <p>If your book has been published through a traditional publisher and we feel we have the appropriate audience for it, we will order it through them or one of our regular distributors on standard industry terms. Please note that we do not purchase books from Amazon.</p>
-
-    <p>If your book is self-published, not available through our regular distributors, or is only available on a non-returnable basis or without the standard terms, we may decide to accept a copy on consignment from you directly. If this is the case, we will send you a Consignment Agreement.</p>
-
-    <p><strong>Please do not drop off unsolicited copies of books in person.</strong> Only email submissions will be considered. Because we are a retail establishment with a small staff, we cannot review books or make any decisions at the time of your visit. Any unsolicited copies of a book left at the store will be considered a donation.</p>
-
-    <p>We are a small space and carry a highly curated selection of books; therefore, the book submissions we do accept are extremely limited. We will be in touch directly if we think your book is a good fit for our store. If you have not heard from us within a month of submission, we are not able to stock your book at this time.</p>
-
-    <p>Thank you and best of luck with your book. Send submissions or questions to <a href="mailto:lisa@townbookstore.com">lisa@townbookstore.com</a>. We look forward to reading your work!</p>
-
-    <p>Lisa Schwartz, Owner</p>
+    <p>If your book is self-published, not available through our regular distributors or is only available on a non-returnable basis or without the standard terms, we may decide to accept a copy on consignment from you directly. If this is the case, we will send you a Consignment Agreement.</p>
+    <p>Please do not drop off unsolicited copies of books in person. Only email submissions will be considered. Because we are a retail establishment with a small staff, we cannot review books or make any decisions at the time of your visit. Any unsolicited copies of a book left at the store will be considered a donation.</p>
+    <p>We are a small space and carry a highly curated selection of books, therefore the book submissions we do accept are extremely limited. We will be in touch directly if we think your book is a good fit for our store. If you have not heard from us within a month of submission, we are not able to stock your book at this time.</p>
+    <p>Thank you and best of luck with your book. Send submissions or questions to <a href="mailto:lisa@townbookstore.com" class="email-link">lisa@townbookstore.com</a>. We look forward to reading your work!<br><em>Lisa Schwartz, Owner</em></p>
   </main>
 
   <footer>
