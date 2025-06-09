@@ -68,42 +68,43 @@
     nav a:hover::after {
       width: 100%;
     }
-    nav a[aria-current="page"] {
-      color: var(--hover-brown);
-      font-weight: 700;
-    }
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 3rem auto 5rem;
-      padding: 0 2rem;
+      padding: 0 1.5rem;
       background: white;
       border-radius: 15px;
       box-shadow: 0 8px 20px var(--shadow);
       padding: 3rem 3rem 4rem;
-      font-size: 1.1rem;
     }
     h2 {
       color: var(--warm-brown);
       font-weight: 600;
-      font-size: 2.4rem;
-      margin-bottom: 1.8rem;
-      letter-spacing: 1.3px;
+      font-size: 2.6rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1.5px;
       text-align: center;
       font-family: 'Poppins', sans-serif;
     }
     p {
-      margin-bottom: 1.3rem;
-      line-height: 1.5;
+      color: var(--soft-brown);
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
     }
-    img {
-      width: 100%;
-      max-width: 700px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(90, 62, 43, 0.15);
-      margin: 1.5rem 0;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+    .contact-info {
+      margin-top: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--warm-brown);
+    }
+    .contact-info a {
+      color: var(--accent-brown);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .contact-info a:hover {
+      color: var(--hover-brown);
     }
     footer {
       text-align: center;
@@ -112,6 +113,15 @@
       font-size: 0.9rem;
       border-top: 1px solid var(--soft-brown);
       font-weight: 400;
+    }
+    /* Icon styles */
+    .social-icons a svg {
+      vertical-align: middle;
+      fill: var(--warm-brown);
+      transition: fill 0.3s ease;
+    }
+    .social-icons a:hover svg {
+      fill: var(--hover-brown);
     }
   </style>
 </head>
@@ -130,12 +140,34 @@
 
   <main>
     <h2>About Us</h2>
-    <img 
-      src="https://drive.google.com/uc?export=view&id=1lZEpWRvqghEw1FXyHdP0k8kJdYhZCw63" 
-      alt="Cozy bookstore interior" 
-    />
-    <p>Welcome to The Town Bookstore, your friendly neighborhood shop where stories come to life and community thrives. We are proud to offer a carefully curated collection of books, highlighting both beloved classics and exciting new voices.</p>
-    <p>Our small, welcoming space is designed to feel like a home for readers and writers alike, with events, author visits, and plenty of cozy corners to get lost in a good book.</p>
+
+    <p>Welcome to the longest running bookstore in Union County! According to the original business ledgers on display in the shop, The Town Book Store first opened its doors on September 4, 1934. After operating from the same address for 72 years, TBS relocated across the street in 2007 to 270 East Broad Street, the site of Westfield’s first library. In today’s rapidly changing retail environment, TBS remains a welcoming space where readers can find a first-rate literary selection and take a moment to slow down and browse. Whatever you’re looking for in your next book, our friendly and knowledgeable booksellers will steer you in the right direction.</p>
+
+    <p>Though modest in size, TBS's inventory is carefully curated and caters to the many interests of our customers. Individualized services like fast turnaround on special orders, author signings, out-of-print book searches, book club discounts and free gift wrapping are just part of the shop’s appeal. Our children’s section is full of popular favorites as well as unique and educational titles you won’t find anywhere else.</p>
+
+    <p>Come by and say hello. We look forward to meeting you and bookending our community for many years to come.</p>
+
+    <p><em>Lisa Schwartz, Owner #8</em></p>
+
+    <div class="contact-info">
+      <p>Email: <a href="mailto:lisa@townbookstore.com">lisa@townbookstore.com</a></p>
+      <p>Phone: <a href="tel:+19082333535">(908) 233-3535</a></p>
+      <p>Open Monday through Saturday 10am-5:30pm</p>
+      <p class="social-icons">
+        <a href="https://www.instagram.com/thetownbookstore/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <!-- Instagram SVG icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm4.5-2.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
+          </svg>
+        </a> &nbsp;&nbsp;
+        <a href="https://www.facebook.com/townbookstore/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <!-- Facebook SVG icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 10-11.5 9.87v-6.98h-2.4v-2.9h2.4v-2.22c0-2.38 1.4-3.7 3.55-3.7 1.03 0 2.1.18 2.1.18v2.3h-1.18c-1.17 0-1.54.73-1.54 1.48v1.76h2.63l-.42 2.9h-2.21v6.98A10 10 0 0022 12z"/>
+          </svg>
+        </a>
+      </p>
+    </div>
   </main>
 
   <footer>
