@@ -1,23 +1,53 @@
+
 body {
-  background-color: #fefbf6;
-  font-family: Georgia, serif;
-  color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #fcf8f2;
+  color: #2e2e2e;
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  color: #5a3e36;
-  font-size: 2.5rem;
+header {
+  background-color: #e9dfd3;
+  padding: 1.5rem;
   text-align: center;
-  margin-top: 2rem;
 }
 
-a {
-  color: #8b5e3c;
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Georgia', serif;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #5a4634;
   text-decoration: none;
+  font-weight: bold;
 }
 
-a:hover {
+main {
+  padding: 2rem;
+}
+
+.homepage-section, .shop-section {
+  padding: 2rem;
+  margin: 1.5rem auto;
+  max-width: 700px;
+  background-color: #fdfaf6;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.homepage-section h2,
+.shop-section h2 {
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.homepage-section a,
+.shop-section a {
+  color: #6b4c3b;
   text-decoration: underline;
 }
