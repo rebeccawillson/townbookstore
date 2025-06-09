@@ -2,33 +2,209 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Town Book Store</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Town Bookstore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #FDF8F3;
+      --warm-brown: #5A3E2B;
+      --soft-brown: #8B6F58;
+      --accent-brown: #A07A55;
+      --hover-brown: #7B5A3C;
+      --shadow: rgba(90, 62, 43, 0.15);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--cream);
+      color: var(--warm-brown);
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--cream);
+      padding: 1rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      margin: 0;
+      cursor: default;
+    }
+    nav a {
+      color: var(--warm-brown);
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--hover-brown);
+    }
+    nav a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0%;
+      background: var(--hover-brown);
+      transition: width 0.3s ease;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 420px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--cream);
+      position: relative;
+      border-radius: 0 0 20px 20px;
+      box-shadow: inset 0 0 0 1000px rgba(90, 62, 43, 0.45);
+    }
+    .hero-content {
+      max-width: 700px;
+      padding: 0 1rem;
+    }
+    .hero h2 {
+      font-size: 3.4rem;
+      font-weight: 600;
+      margin: 0 0 1rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      letter-spacing: 2px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.4;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.25);
+    }
+    main {
+      max-width: 900px;
+      margin: 3rem auto 5rem;
+      padding: 0 1.5rem;
+    }
+    section {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 8px 20px var(--shadow);
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    section h3 {
+      color: var(--warm-brown);
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 1px;
+    }
+    section p {
+      color: var(--soft-brown);
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      background-color: var(--accent-brown);
+      color: var(--cream);
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+    .btn:hover {
+      background-color: var(--hover-brown);
+      box-shadow: 0 6px 18px rgba(123, 90, 60, 0.6);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      color: var(--soft-brown);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--soft-brown);
+      font-weight: 400;
+    }
+    /* Vintage detail: small hand-drawn style underline for headings */
+    section h3::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--accent-brown);
+      margin-top: 6px;
+      border-radius: 2px;
+      filter: drop-shadow(0 1px 0 rgba(255,255,255,0.3));
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>The Town Book Store</h1>
+    <h1>The Town Bookstore</h1>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About Us</a>
       <a href="shop.html">Shop</a>
+      <a href="staff-picks.html">Staff Picks</a>
+      <a href="indie-authors.html">Indie Authors</a>
       <a href="events.html">Events</a>
     </nav>
   </header>
 
+  <section class="hero" role="banner" aria-label="Cozy bookstore banner image">
+    <div class="hero-content">
+      <h2>Welcome to The Town Bookstore</h2>
+      <p>Your cozy corner for timeless stories and new adventures</p>
+    </div>
+  </section>
+
   <main>
-    <section class="homepage-section">
-      <h2>Audiobooks Now Available</h2>
-      <p>Love listening to books on the go? Support our store while you listen with 
-        <a href="https://libro.fm/thetownbookstore" target="_blank">Libro.fm</a>, 
-        the audiobook platform that partners with indie bookstores like us.</p>
+    <section aria-labelledby="welcome-heading">
+      <h3 id="welcome-heading">A Legacy of Community and Books</h3>
+      <p>Since 1934, The Town Bookstore has been a cherished destination for readers of all ages in Union County. Nestled in the heart of Westfield, our shop offers a carefully curated selection, friendly service, and a warm, welcoming atmosphere where you can browse and discover your next great read.</p>
+      <a href="about.html" class="btn" aria-label="Learn more about The Town Bookstore">Learn More</a>
     </section>
 
-    <section class="homepage-section">
-      <h2>📬 May Newsletter</h2>
-      <p>Catch up on the latest from The Town Book Store in our 
-        <a href="https://mailchi.mp/179b534ad325/may-2025-greetings-10335890?e=94f08df69d" target="_blank">May 2025 Newsletter</a>.</p>
+    <section aria-labelledby="shop-heading">
+      <h3 id="shop-heading">Shop Our Curated Collection</h3>
+      <p>From print to ebooks and audiobooks, explore our selections online via Bookshop.org and Libro.fm. Support independent bookstores with every purchase.</p>
+      <a href="shop.html" class="btn" aria-label="Visit the Shop page">Shop Now</a>
+    </section>
+
+    <section aria-labelledby="events-heading">
+      <h3 id="events-heading">Events & Book Club</h3>
+      <p>Join us for author signings, community gatherings, and our popular monthly book club. Stay tuned for upcoming events and special promotions.</p>
+      <a href="events.html" class="btn" aria-label="See upcoming events">See Events</a>
     </section>
   </main>
+
+  <footer>
+    &copy; 2025 The Town Bookstore &nbsp;|&nbsp; 270 East Broad Street, Westfield, NJ &nbsp;|&nbsp; (908) 233-3535
+  </footer>
 </body>
 </html>
