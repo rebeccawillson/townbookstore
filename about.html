@@ -84,13 +84,19 @@
       margin-bottom: 1.5rem;
       letter-spacing: 1.5px;
       text-align: center;
-      font-family: 'Poppins', sans-serif;
     }
     p {
       color: var(--soft-brown);
       font-size: 1.15rem;
       line-height: 1.7;
       margin-bottom: 1.4rem;
+    }
+    .about-image {
+      display: block;
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 0 auto 2rem;
+      box-shadow: 0 4px 12px var(--shadow);
     }
     .contact-info {
       margin-top: 2rem;
@@ -114,7 +120,6 @@
       border-top: 1px solid var(--soft-brown);
       font-weight: 400;
     }
-    /* Icon styles */
     .social-icons a svg {
       vertical-align: middle;
       fill: var(--warm-brown);
@@ -122,15 +127,6 @@
     }
     .social-icons a:hover svg {
       fill: var(--hover-brown);
-    }
-    /* Image styling */
-    .about-image {
-      width: 100%;
-      max-width: 800px;
-      margin: 1.5rem auto 2rem;
-      display: block;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -150,9 +146,9 @@
   <main>
     <h2>About Us</h2>
 
-    <p>Welcome to the longest running bookstore in Union County! According to the original business ledgers on display in the shop, The Town Book Store first opened its doors on September 4, 1934. After operating from the same address for 72 years, TBS relocated across the street in 2007 to 270 East Broad Street, the site of Westfield’s first library. In today’s rapidly changing retail environment, TBS remains a welcoming space where readers can find a first-rate literary selection and take a moment to slow down and browse. Whatever you’re looking for in your next book, our friendly and knowledgeable booksellers will steer you in the right direction.</p>
+    <img src="images/Image1.PNG" alt="The Town Bookstore Interior" class="about-image" />
 
-    <img src="images/Image1.PNG" alt="Cozy interior of The Town Bookstore" class="about-image" />
+    <p>Welcome to the longest running bookstore in Union County! According to the original business ledgers on display in the shop, The Town Book Store first opened its doors on September 4, 1934. After operating from the same address for 72 years, TBS relocated across the street in 2007 to 270 East Broad Street, the site of Westfield’s first library. In today’s rapidly changing retail environment, TBS remains a welcoming space where readers can find a first-rate literary selection and take a moment to slow down and browse. Whatever you’re looking for in your next book, our friendly and knowledgeable booksellers will steer you in the right direction.</p>
 
     <p>Though modest in size, TBS's inventory is carefully curated and caters to the many interests of our customers. Individualized services like fast turnaround on special orders, author signings, out-of-print book searches, book club discounts and free gift wrapping are just part of the shop’s appeal. Our children’s section is full of popular favorites as well as unique and educational titles you won’t find anywhere else.</p>
 
@@ -166,13 +162,11 @@
       <p>Open Monday through Saturday 10am-5:30pm</p>
       <p class="social-icons">
         <a href="https://www.instagram.com/thetownbookstore/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <!-- Instagram SVG icon -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm4.5-2.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
           </svg>
         </a> &nbsp;&nbsp;
         <a href="https://www.facebook.com/townbookstore/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <!-- Facebook SVG icon -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path d="M22 12a10 10 0 10-11.5 9.87v-6.98h-2.4v-2.9h2.4v-2.22c0-2.38 1.4-3.7 3.55-3.7 1.03 0 2.1.18 2.1.18v2.3h-1.18c-1.17 0-1.54.73-1.54 1.48v1.76h2.63l-.42 2.9h-2.21v6.98A10 10 0 0022 12z"/>
           </svg>
