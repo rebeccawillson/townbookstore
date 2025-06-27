@@ -71,55 +71,77 @@
     }
     main {
       max-width: 1100px;
-      margin: 3rem auto 5rem;
+      margin: 3rem auto;
       padding: 0 2rem;
     }
-    .events-container {
+    h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    .event-wrapper {
       display: flex;
-      flex-wrap: wrap;
       gap: 2rem;
+      flex-wrap: wrap;
     }
-    .events-image {
-      flex: 1 1 350px;
-      min-height: 300px;
-      background: url('images/events-banner.jpg') no-repeat center center / cover;
+
+    .event-image {
+      flex: 1 1 300px;
+      max-width: 100%;
+    }
+
+    .event-image img {
+      width: 100%;
       border-radius: 15px;
-      box-shadow: 0 6px 16px var(--shadow);
+      box-shadow: 0 6px 14px var(--shadow);
     }
+
+    .event-content {
+      flex: 2 1 500px;
+    }
+
     .event-list {
-      flex: 1 1 500px;
       list-style: none;
       padding: 0;
+      margin: 0;
     }
+
     .event-item {
       background: white;
-      margin-bottom: 1.5rem;
-      padding: 1.8rem 2rem;
+      padding: 1.5rem 2rem;
       border-radius: 15px;
       box-shadow: 0 5px 15px var(--shadow);
+      margin-bottom: 1.5rem;
       cursor: pointer;
       transition: box-shadow 0.3s ease;
     }
+
     .event-item:hover {
       box-shadow: 0 10px 25px var(--shadow);
     }
+
     .event-date {
       font-weight: 700;
       color: var(--accent-brown);
       font-size: 1.1rem;
       margin-bottom: 0.5rem;
     }
+
     .event-title {
       font-size: 1.4rem;
       font-weight: 600;
-      margin: 0 0 0.3rem 0;
       color: var(--warm-brown);
+      margin: 0 0 0.3rem 0;
     }
+
     .event-time-location {
       font-size: 0.95rem;
       color: var(--soft-brown);
       margin-bottom: 1rem;
     }
+
     .event-description {
       display: none;
       font-size: 1rem;
@@ -127,9 +149,11 @@
       margin-top: 1rem;
       line-height: 1.4;
     }
+
     .event-rsvp {
       margin-top: 1rem;
     }
+
     .event-rsvp a {
       background-color: var(--accent-brown);
       color: white;
@@ -139,15 +163,11 @@
       font-weight: 600;
       transition: background-color 0.3s ease;
     }
+
     .event-rsvp a:hover {
       background-color: var(--hover-brown);
     }
-    h2 {
-      text-align: center;
-      font-size: 2.4rem;
-      margin-bottom: 2rem;
-      color: var(--warm-brown);
-    }
+
     footer {
       text-align: center;
       padding: 1.5rem 1rem;
@@ -156,71 +176,78 @@
       border-top: 1px solid var(--soft-brown);
       font-weight: 400;
     }
-    @media (max-width: 850px) {
-      .events-container {
+
+    @media (max-width: 768px) {
+      .event-wrapper {
         flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-<header>
-  <h1>The Town Bookstore</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="shop.html">Shop</a>
-    <a href="staff-picks.html">Staff Picks</a>
-    <a href="indie-authors.html">Indie Authors</a>
-    <a href="events.html" aria-current="page">Events</a>
-  </nav>
-</header>
+  <header>
+    <h1>The Town Bookstore</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="shop.html">Shop</a>
+      <a href="staff-picks.html">Staff Picks</a>
+      <a href="indie-authors.html">Indie Authors</a>
+      <a href="events.html" aria-current="page">Events</a>
+    </nav>
+  </header>
 
-<main>
-  <h2>Events & Book Club</h2>
-  <div class="events-container">
-    <div class="events-image" role="img" aria-label="Photo of bookstore event or community gathering"></div>
-    <ul id="eventList" class="event-list"></ul>
-  </div>
-</main>
+  <main>
+    <h2>Events & Book Club</h2>
 
-<footer>
-  &copy; 2025 The Town Bookstore &nbsp;|&nbsp; 270 East Broad Street, Westfield, NJ &nbsp;|&nbsp; (908) 233-3535
-</footer>
+    <div class="event-wrapper">
+      <div class="event-image">
+        <img src="images/Image4.jpg" alt="Book club or event photo" />
+      </div>
 
-<script>
-  const events = [
-    {
-      "date": "2025-06-18",
-      "time": "6:00 PM - 7:30 PM",
-      "title": "Seasons Readings Book Club ~ Summer: 'Tom Lake' by Anne Patchett",
-      "location": "The Town Bookstore - Community Room",
-      "description": "Celebrate the start of summer with a special edition of our book club. We'll be discussing Anne Patchett's novel *Tom Lake* — a beautiful story of love, memory, and family. Light refreshments will be served.",
-      "rsvpLink": "mailto:lisa@townbookstore.com?subject=RSVP%20Seasons%20Readings%20Book%20Club"
-    }
-  ];
+      <div class="event-content">
+        <ul id="eventList" class="event-list"></ul>
+      </div>
+    </div>
+  </main>
 
-  const eventList = document.getElementById('eventList');
+  <footer>
+    &copy; 2025 The Town Bookstore &nbsp;|&nbsp; 270 East Broad Street, Westfield, NJ &nbsp;|&nbsp; (908) 233-3535
+  </footer>
 
-  events.forEach(event => {
-    const li = document.createElement('li');
-    li.classList.add('event-item');
+  <script>
+    const events = [
+      {
+        "date": "2025-06-18",
+        "time": "6:00 PM - 7:30 PM",
+        "title": "Seasons Readings Book Club ~ Summer: 'Tom Lake' by Anne Patchett",
+        "location": "The Town Bookstore - Community Room",
+        "description": "Celebrate the start of summer with a special edition of our book club. We'll be discussing Anne Patchett's novel *Tom Lake* — a beautiful story of love, memory, and family. Light refreshments will be served.",
+        "rsvpLink": "mailto:lisa@townbookstore.com?subject=RSVP%20Seasons%20Readings%20Book%20Club"
+      }
+    ];
 
-    li.innerHTML = `
-      <div class="event-date">${new Date(event.date).toLocaleDateString(undefined, {weekday: 'short', month: 'short', day: 'numeric', year:'numeric'})}</div>
-      <h3 class="event-title">${event.title}</h3>
-      <div class="event-time-location">${event.time} | ${event.location}</div>
-      <div class="event-description">${event.description}</div>
-      ${event.rsvpLink ? `<div class="event-rsvp"><a href="${event.rsvpLink}">RSVP / Join</a></div>` : ''}
-    `;
+    const eventList = document.getElementById('eventList');
 
-    li.addEventListener('click', () => {
-      const desc = li.querySelector('.event-description');
-      desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+    events.forEach(event => {
+      const li = document.createElement('li');
+      li.classList.add('event-item');
+
+      li.innerHTML = `
+        <div class="event-date">${new Date(event.date).toLocaleDateString(undefined, {weekday: 'short', month: 'short', day: 'numeric', year:'numeric'})}</div>
+        <h3 class="event-title">${event.title}</h3>
+        <div class="event-time-location">${event.time} | ${event.location}</div>
+        <div class="event-description">${event.description}</div>
+        ${event.rsvpLink ? `<div class="event-rsvp"><a href="${event.rsvpLink}">RSVP / Join</a></div>` : ''}
+      `;
+
+      li.addEventListener('click', () => {
+        const desc = li.querySelector('.event-description');
+        desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+      });
+
+      eventList.appendChild(li);
     });
-
-    eventList.appendChild(li);
-  });
-</script>
+  </script>
 </body>
 </html>
