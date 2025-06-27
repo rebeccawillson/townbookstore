@@ -14,9 +14,7 @@
       --hover-brown: #7B5A3C;
       --shadow: rgba(90, 62, 43, 0.15);
     }
-    * {
-      box-sizing: border-box;
-    }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -24,6 +22,7 @@
       color: var(--warm-brown);
       line-height: 1.6;
     }
+
     header {
       background-color: var(--cream);
       padding: 1rem 3rem;
@@ -35,6 +34,7 @@
       top: 0;
       z-index: 100;
     }
+
     header h1 {
       font-weight: 600;
       font-size: 1.8rem;
@@ -42,6 +42,7 @@
       margin: 0;
       cursor: default;
     }
+
     nav a {
       color: var(--warm-brown);
       text-decoration: none;
@@ -51,9 +52,11 @@
       position: relative;
       transition: color 0.3s ease;
     }
+
     nav a:hover {
       color: var(--hover-brown);
     }
+
     nav a::after {
       content: "";
       display: block;
@@ -65,53 +68,38 @@
       bottom: -5px;
       left: 0;
     }
+
     nav a:hover::after {
       width: 100%;
     }
-    main {
-      max-width: 900px;
-      margin: 3rem auto 5rem;
-      padding: 0 1.5rem;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px var(--shadow);
-      padding: 3rem 3rem 4rem;
-    }
-    h2 {
-      color: var(--warm-brown);
-      font-weight: 600;
-      font-size: 2.6rem;
-      margin-bottom: 1.5rem;
-      letter-spacing: 1.5px;
-      text-align: center;
-    }
-    p {
-      color: var(--soft-brown);
-      font-size: 1.15rem;
-      line-height: 1.7;
-      margin-bottom: 1.4rem;
-    }
-    .about-image {
-      display: block;
-      max-width: 100%;
-      border-radius: 12px;
-      margin: 0 auto 2rem;
-      box-shadow: 0 4px 12px var(--shadow);
-    }
-    .contact-info {
-      margin-top: 2rem;
-      font-weight: 600;
-      font-size: 1rem;
-      color: var(--warm-brown);
-    }
-    .contact-info a {
-      color: var(--accent-brown);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .contact-info a:hover {
+
+    nav a[aria-current="page"] {
       color: var(--hover-brown);
+      font-weight: 700;
     }
+
+    main {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .about-text {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px var(--shadow);
+      font-size: 1.1rem;
+      color: var(--soft-brown);
+    }
+
     footer {
       text-align: center;
       padding: 1.5rem 1rem;
@@ -119,14 +107,6 @@
       font-size: 0.9rem;
       border-top: 1px solid var(--soft-brown);
       font-weight: 400;
-    }
-    .social-icons a svg {
-      vertical-align: middle;
-      fill: var(--warm-brown);
-      transition: fill 0.3s ease;
-    }
-    .social-icons a:hover svg {
-      fill: var(--hover-brown);
     }
   </style>
 </head>
@@ -145,34 +125,10 @@
 
   <main>
     <h2>About Us</h2>
-
-    <img src="images/Image1.PNG" alt="The Town Bookstore Interior" class="about-image" />
-    <img src="images/Image2.jpg" alt="Lisa and Staff at The Town Bookstore" class="about-image" />
-
-    <p>Welcome to the longest running bookstore in Union County! According to the original business ledgers on display in the shop, The Town Book Store first opened its doors on September 4, 1934. After operating from the same address for 72 years, TBS relocated across the street in 2007 to 270 East Broad Street, the site of Westfield’s first library. In today’s rapidly changing retail environment, TBS remains a welcoming space where readers can find a first-rate literary selection and take a moment to slow down and browse. Whatever you’re looking for in your next book, our friendly and knowledgeable booksellers will steer you in the right direction.</p>
-
-    <p>Though modest in size, TBS's inventory is carefully curated and caters to the many interests of our customers. Individualized services like fast turnaround on special orders, author signings, out-of-print book searches, book club discounts and free gift wrapping are just part of the shop’s appeal. Our children’s section is full of popular favorites as well as unique and educational titles you won’t find anywhere else.</p>
-
-    <p>Come by and say hello. We look forward to meeting you and bookending our community for many years to come.</p>
-
-    <p><em>Lisa Schwartz, Owner #8</em></p>
-
-    <div class="contact-info">
-      <p>Email: <a href="mailto:lisa@townbookstore.com">lisa@townbookstore.com</a></p>
-      <p>Phone: <a href="tel:+19082333535">(908) 233-3535</a></p>
-      <p>Open Monday through Saturday 10am–5:30pm</p>
-      <p class="social-icons">
-        <a href="https://www.instagram.com/thetownbookstore/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm4.5-2.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
-          </svg>
-        </a> &nbsp;&nbsp;
-        <a href="https://www.facebook.com/townbookstore/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M22 12a10 10 0 10-11.5 9.87v-6.98h-2.4v-2.9h2.4v-2.22c0-2.38 1.4-3.7 3.55-3.7 1.03 0 2.1.18 2.1.18v2.3h-1.18c-1.17 0-1.54.73-1.54 1.48v1.76h2.63l-.42 2.9h-2.21v6.98A10 10 0 0022 12z"/>
-          </svg>
-        </a>
-      </p>
+    <div class="about-text">
+      <p>Since 1934, The Town Bookstore has been a cherished local gem in the heart of Westfield, New Jersey. With nearly a century of history, we’ve built a warm and welcoming space where readers of all generations can discover their next favorite book.</p>
+      <p>We pride ourselves on offering a curated collection of new titles, classics, and local author highlights. Whether you're searching for the perfect gift, attending one of our book club discussions, or just browsing, you’ll find friendly faces and personal recommendations.</p>
+      <p>Our mission is to foster a love for reading and to continue being a gathering place for community, creativity, and connection. Thank you for supporting an independent bookstore and helping us write the next chapter of our story.</p>
     </div>
   </main>
 
