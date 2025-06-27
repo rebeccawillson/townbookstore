@@ -70,19 +70,24 @@
       font-weight: 700;
     }
     main {
-      max-width: 800px;
+      max-width: 1100px;
       margin: 3rem auto 5rem;
       padding: 0 2rem;
     }
-    h2 {
-      color: var(--warm-brown);
-      font-weight: 600;
-      font-size: 2.4rem;
-      margin-bottom: 1.8rem;
-      letter-spacing: 1.3px;
-      text-align: center;
+    .events-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .events-image {
+      flex: 1 1 350px;
+      min-height: 300px;
+      background: url('images/events-banner.jpg') no-repeat center center / cover;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px var(--shadow);
     }
     .event-list {
+      flex: 1 1 500px;
       list-style: none;
       padding: 0;
     }
@@ -137,6 +142,12 @@
     .event-rsvp a:hover {
       background-color: var(--hover-brown);
     }
+    h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+      color: var(--warm-brown);
+    }
     footer {
       text-align: center;
       padding: 1.5rem 1rem;
@@ -145,73 +156,71 @@
       border-top: 1px solid var(--soft-brown);
       font-weight: 400;
     }
-    .event-img {
-      display: block;
-      max-width: 100%;
-      margin: 0 auto 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px var(--shadow);
+    @media (max-width: 850px) {
+      .events-container {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>The Town Bookstore</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="shop.html">Shop</a>
-      <a href="staff-picks.html">Staff Picks</a>
-      <a href="indie-authors.html">Indie Authors</a>
-      <a href="events.html" aria-current="page">Events</a>
-    </nav>
-  </header>
+<header>
+  <h1>The Town Bookstore</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="shop.html">Shop</a>
+    <a href="staff-picks.html">Staff Picks</a>
+    <a href="indie-authors.html">Indie Authors</a>
+    <a href="events.html" aria-current="page">Events</a>
+  </nav>
+</header>
 
-  <main>
-    <h2>Events & Book Club</h2>
-
-    <img src="images/Image4.jpg" alt="Book club or event photo" class="event-img" />
-
+<main>
+  <h2>Events & Book Club</h2>
+  <div class="events-container">
+    <div class="events-image" role="img" aria-label="Photo of bookstore event or community gathering"></div>
     <ul id="eventList" class="event-list"></ul>
-  </main>
+  </div>
+</main>
 
-  <footer>
-    &copy; 2025 The Town Bookstore &nbsp;|&nbsp; 270 East Broad Street, Westfield, NJ &nbsp;|&nbsp; (908) 233-3535
-  </footer>
+<footer>
+  &copy; 2025 The Town Bookstore &nbsp;|&nbsp; 270 East Broad Street, Westfield, NJ &nbsp;|&nbsp; (908) 233-3535
+</footer>
 
-  <script>
-    const events = [
-      {
-        "date": "2025-06-18",
-        "time": "6:00 PM - 7:30 PM",
-        "title": "Seasons Readings Book Club ~ Summer: 'Tom Lake' by Anne Patchett",
-        "location": "The Town Bookstore - Community Room",
-        "description": "Celebrate the start of summer with a special edition of our book club. We'll be discussing Anne Patchett's novel *Tom Lake* — a beautiful story of love, memory, and family. Light refreshments will be served.",
-        "rsvpLink": "mailto:lisa@townbookstore.com?subject=RSVP%20Seasons%20Readings%20Book%20Club"
-      }
-    ];
+<script>
+  const events = [
+    {
+      "date": "2025-06-18",
+      "time": "6:00 PM - 7:30 PM",
+      "title": "Seasons Readings Book Club ~ Summer: 'Tom Lake' by Anne Patchett",
+      "location": "The Town Bookstore - Community Room",
+      "description": "Celebrate the start of summer with a special edition of our book club. We'll be discussing Anne Patchett's novel *Tom Lake* — a beautiful story of love, memory, and family. Light refreshments will be served.",
+      "rsvpLink": "mailto:lisa@townbookstore.com?subject=RSVP%20Seasons%20Readings%20Book%20Club"
+    }
+  ];
 
-    const eventList = document.getElementById('eventList');
+  const eventList = document.getElementById('eventList');
 
-    events.forEach(event => {
-      const li = document.createElement('li');
-      li.classList.add('event-item');
+  events.forEach(event => {
+    const li = document.createElement('li');
+    li.classList.add('event-item');
 
-      li.innerHTML = `
-        <div class="event-date">${new Date(event.date).toLocaleDateString(undefined, {weekday: 'short', month: 'short', day: 'numeric', year:'numeric'})}</div>
-        <h3 class="event-title">${event.title}</h3>
-        <div class="event-time-location">${event.time} | ${event.location}</div>
-        <div class="event-description">${event.description}</div>
-        ${event.rsvpLink ? `<div class="event-rsvp"><a href="${event.rsvpLink}">RSVP / Join</a></div>` : ''}
-      `;
+    li.innerHTML = `
+      <div class="event-date">${new Date(event.date).toLocaleDateString(undefined, {weekday: 'short', month: 'short', day: 'numeric', year:'numeric'})}</div>
+      <h3 class="event-title">${event.title}</h3>
+      <div class="event-time-location">${event.time} | ${event.location}</div>
+      <div class="event-description">${event.description}</div>
+      ${event.rsvpLink ? `<div class="event-rsvp"><a href="${event.rsvpLink}">RSVP / Join</a></div>` : ''}
+    `;
 
-      li.addEventListener('click', () => {
-        const desc = li.querySelector('.event-description');
-        desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
-      });
-
-      eventList.appendChild(li);
+    li.addEventListener('click', () => {
+      const desc = li.querySelector('.event-description');
+      desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
     });
-  </script>
+
+    eventList.appendChild(li);
+  });
+</script>
 </body>
 </html>
